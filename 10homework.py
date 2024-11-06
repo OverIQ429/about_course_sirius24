@@ -4,14 +4,14 @@ class Company:
         self.employers = []
         self.profite = balance
 
-    def set_profit(self, profite):
+    def set_profit(self, profite: int):
         self.profite += profite
 
-    def create_director(self, first_name, second_name, Id, salary):
+    def create_director(self, first_name: str, second_name: str, Id: int, salary:int):
         self.director = Director(first_name, second_name, Id, salary)
         self.employers.append(self.director)
 
-    def create_employee(self, first_name, second_name, Id, salary):
+    def create_employee(self, first_name: str, second_name:str, Id:int, salary:int):
         employer= Employer(first_name, second_name, Id, salary)
         self.employers.append(employer)
 
@@ -28,28 +28,28 @@ class Company:
 
 
 class Director:
-    def __init__(self, first_name, second_name, Id, salary):
+    def __init__(self, first_name: str, second_name: str, Id: int, salary: int):
         self.first_name = first_name
         self.second_name = second_name
         self.id = Id
         self.salary = salary
         self.promises = []
 
-    def get_paid(self, profite):
+    def get_paid(self, profite: int):
         self.promises.append(profite)
 
     def check_promises(self):
         print(self.promises[-1])
 
 class Employer:
-    def __init__(self, first_name, second_name, Id, salary):
+    def __init__(self, first_name: str, second_name: str, Id: int, salary: int):
         self.first_name = first_name
         self.second_name = second_name
         self.id = Id
         self.salary = salary
         self.promises = []
 
-    def get_paid(self, profite):
+    def get_paid(self, profite: int):
         self.promises.append(profite)
 
     def check_promises(self):

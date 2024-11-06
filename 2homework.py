@@ -1,12 +1,14 @@
 def anser(number):
-    firstnumberlist = map(int, str(number))
-    anser_chentie_value = list(filter(lambda x: x % 2 == 0, firstnumberlist ))
-    secondnumberlist = map(int, str(number))
-    anser_nechentie_value = list(filter(lambda x: x % 2 == 1, secondnumberlist ))
-    return sum(anser_chentie_value), sum(anser_nechentie_value)
-number = int(input("Введите шестизначное число:"))
+    numberlist = [int(digit) for digit in str(number)]
+    anser_chentie_value = 0
+    anser_nechentie_value = 0
+    for el in range(0, 6, 2):
+        anser_chentie_value += numberlist[el]
+    for el in range(1, 6, 2):
+        anser_nechentie_value += numberlist[el]
+    return int(str(anser_chentie_value) + str(anser_nechentie_value))
+number = int(input())
 while number / 100000 < 1:
-    print("Ошибка. Введите шестизначное число")
-    number = int(input("Введите шестизначное число:"))
-print("Ответ:\n")
+    number = int(input())
+print()
 print(anser(number))

@@ -3,9 +3,8 @@ def anser(number):
     for symbol in map(int, str(number)):
         anser_value *= symbol
     return anser_value
-number = int(input("Введите пятизначное число:"))
+number = int(input())
 while number / 10000 < 1:
-    print("Ошибка. Введите пятизначное число")
-    number = int(input("Введите пятизначное число:"))
-print("Ответ:\n")
+    number = int(input())
+print()
 print(anser(number))

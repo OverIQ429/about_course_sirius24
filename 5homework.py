@@ -5,5 +5,5 @@ def numerolog(number):
         array.append(checknumber)
         checknumber *= 2
     return array
-number = int(input("Введите натуральное число:"))
+number = int(input())
 print(numerolog(number))

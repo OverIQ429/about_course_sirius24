@@ -10,7 +10,7 @@ def anser(number):
     return iteration
 
 
-number = int(input("Введите натуральное число:"))
+number = int(input())
 while number < 1:
-    number = int(input("Ошибка. Вы ввели не натуральное число.\n Введите натуральное число:"))
-print("Ответ:", anser(number))
+    number = int(input())
+print(anser(number))

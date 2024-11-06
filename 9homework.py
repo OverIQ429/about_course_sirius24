@@ -1,5 +1,5 @@
 class Laptop:
-    def __init__(self, brand, model, price):
+    def __init__(self, brand: str, model: str, price: str):
         self.brand = brand
         self.model = model
         self.price = price
